@@ -19,38 +19,34 @@
                 <h1 class="title-top"> the Awesome Count Back</h1>
             </div>
         </section>
+        
         <section class="section" id="dTitle">
+            <div>
             <h2 class="dinamicTitle" id="dinamicTitle"> Aweseome Count back name </h2>
-            <input type="text" name="countBackTitle" id="countBackName" placeholder="Insert awesome countback name name here" > <button class="dinamicButon" onclick=" callBothFunctions() "> modify title</button> 
+            </div>
+            <div>
+            <input type="text" name="countBackTitle" id="countBackName" placeholder="Insert awesome countback name name here" /> 
+            <div class=".butonCont">
+            <button class="dinamicButon " onclick=" callBothFunctions() "> modify title</button> 
+            </div>
+        </div>
         </section>
-        <section id=" leyendContainer" class="section"> <!-- chage h2 for span-->
-            <span class="legend">Days</span>
-            <span class="legend"> : </span>
-            <span class="legend">Hour</span>
-            <span class="legend"> : </span>
-            <span class="legend">minutes</span>
-            <span class="legend"> : </span>
-            <span class="legend">Secondes</span>
-        </section>
+            
         <section class="section">
-            <div class="timer"> here will be the count down</div> <!-- here must come the js-->
+            <div class="timeImput"> 
+                <label for="targetTime">Days:Hours:Minutes:Seconds: </label>
+                <input type="text" id="targetTime" placeholder="00:00:00:00">
+                <div id="countdown" class="timer"></div>
+            </div><!--to be resolved--> 
         </section>
+
         <section class="section butonCont">
             <button id="start" class="butons" onclick="startCountdown()">start</button>
             <button id="stop" class="butons" onclick="stopCountdown()">stop</button>
         </section>
-        <section class="section">
-            <div class="timeImput"> 
-                <input type="time" id="targetTime" placeholder="here you will add the time">
-            </div><!--to be resolved--> 
-        </section>
+
     </main>
-<footer>
-    <div class="footer">
-        <div class="rights"></div>
-        <div class="rights"></div>
-    </div>
-</footer>
+
     
 </body>
 </html>

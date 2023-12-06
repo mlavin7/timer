@@ -13,15 +13,15 @@ function displayField(){
           // clock is visible. hide it
           field.style.display = 'none';
           // change button text
-          buttonField.innerHTML = 'Add title';
+         
       
     
         }
         else {
-          // clock is hidden. show it
+          // clock is hidwidthen. show it
           field.style.display = 'block';
           // change button text
-          buttonField.innerHTML = 'Post and Hide Field';
+          
         }
       }
         
@@ -31,31 +31,57 @@ function displayField(){
 
   }
 
-// this functions hat come i am making them with intewrnet help so i wil take detail notes of what every step do 
-// as I research every step to be able to learn and not only 
-// repourpose them 
+// countdown
 
-// so this is the count down----v
+let targetTime; //target time will store whats is in the imput
+let countdownInterval; // will store the interval
 
+function startCountdown() {
+  // Get the target time from the input field
+  const inputTime = document.getElementById('targetTime').value;
 
-  let countdownInterval; // here we will store the interval 
-  //i am not sure but seems to be not declare in terms of being a striong or so
-  //any ways we wil store here the interval 
+  // Validate the input format (days:hours:minutes:seconds)
+  const regex = /^(\d+):(\d{1,2}):(\d{1,2}):(\d{1,2})$/; 
   
-  function startCountdown(){
-    // this will clear the interval stored in " let countdownInterval "
+  const match = inputTime.match(regex); // check that the imput match the rules of the regulat exporession
 
-    clearInterval(countdownInterval) 
-    // clear Interval is a Method that cancels a timed, repeating action which was 
-    // previously established by a call to setInterval()
+  if (!match) {
+    alert('Invalid input format. Please use the format "days:hours:minutes:seconds".');
+    return;
+  } // if do not mack deploy an alert estating the format ( as is gonna be in the place holder
 
-   // next we need to target the time from the imput terminal 
-   // and store it in some variables
-   // v---we will use get elemet by id bexcatuse is the easiest way to target an unique element from the DOM
-   
-  const targetTimeImput = document.getElementById()
+  const [, days, hours, minutes, seconds] = match; // here we create an object
 
 
+  // Calculate the target date and time
+  const currentDate = new Date();
+  targetTime = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + parseInt(days, 10), parseInt(hours, 10), parseInt(minutes, 10), parseInt(seconds, 10));
+  
+  // Update the countdown every second
+  countdownInterval = setInterval(updateCountdown, 1000);
 
+  // Initial update
+  updateCountdown();
+}
+
+function stopCountdown() {
+  clearInterval(countdownInterval);
+  document.getElementById('countdown').innerHTML = 'Countdown stopped!';
+}
+
+function updateCountdown() {
+  const currentDate = new Date().getTime();
+  const timeRemaining = targetTime.getTime() - currentDate;
+
+  if (timeRemaining <= 0) {
+    clearInterval(countdownInterval);
+    document.getElementById('countdown').innerHTML = 'Countdown expired!';
+  } else {
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+    document.getElementById('countdown').innerHTML = `${days} days : ${hours} hours : ${minutes} minutes : ${seconds} seconds`;
   }
-
+}
