@@ -50,7 +50,7 @@ function toggleInput() {
 
 let countdownInterval; // I defined interval outside the Function so 
 // can also be called by the stop buton
-let mySound = new Audio('sound/spooky-gongwav-14904 (2).mp3')
+
 
 
   function startCountdown() {
@@ -80,7 +80,7 @@ let mySound = new Audio('sound/spooky-gongwav-14904 (2).mp3')
       let secondsLeft = totalTime % 60;
 
       document.getElementById('countdown').textContent = 
-          hoursLeft + ' hours ' + ' ' + minutesLeft + ' minutes ' +' ' + secondsLeft + ' seconds';
+          hoursLeft + ' hours ' + minutesLeft + ' minutes ' + secondsLeft + ' seconds';
 
       if (totalTime <= 0) {
         clearInterval(countdownInterval);
