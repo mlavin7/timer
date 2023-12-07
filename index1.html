@@ -24,31 +24,32 @@
             <div>
             <h2 class="dinamicTitle" id="dinamicTitle"> Aweseome Count back name </h2>
             </div>
-            <div class="buttonContainer">
+           <div class="buttonContainer">
+            <form>
             <input type="text" name="countBackTitle" id="countBackName" placeholder="Insert awesome countback name name here" /> 
-            
+            </form>
             <button class="dinamicButon " id="butonA" onclick=" callBothFunctions() "> modify title</button> 
            
-        </div>
+             </div>
         </section>
             
         <section class="section">
             <div class="timeImput"> 
-                <form >
-                    <label for="hours" >Hours</label>
-                    <input type="number" id="hours" placeholder="00" min="1" max="24"> <!-- id hours use to be target time check in js--> 
-                    <label for="minutes" >Hours</label>
-                    <input type="number" id="minutes" placeholder="00" min="1" max="59"> <!-- id hours use to be target time check in js--> 
-                    <label for="seconds" >Hours</label>
-                    <input type="number" id="seconds" placeholder="00" min="1" max="59"> <!-- id hours use to be target time check in js--> 
+                <form id="countdownInput">
+                    <label for="hours" ></label>
+                    <input type="number" id="hours" placeholder="00" min="1" max="24" maxlength="2"> <!-- id hours use to be target time check in js--> 
+                    <label for="minutes" >:</label>
+                    <input type="number" id="minutes" placeholder="00" min="1" max="59" maxlength="2"> <!-- id hours use to be target time check in js--> 
+                    <label for="seconds" >:</label>
+                    <input type="number" id="seconds" placeholder="00" min="1" max="59" maxlength="2"> <!-- id hours use to be target time check in js--> 
                 </form>
 
 
                 <div id="countdown" class="timer"></div>
-            </div><!--to be resolved--> 
+            </div>
         </section>
 
-        <section class="section butonCont">
+        <section  id="btcont">
             <button id="start" class="butons" onclick="startCountdown()">start</button>
             <button id="stop" class="butons" onclick="stopCountdown()">stop</button>
         </section>

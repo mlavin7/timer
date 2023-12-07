@@ -24,7 +24,7 @@
         justify-items: center;
         flex-direction: column;
         width: 20rem;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
     input::placeholder{
         display: flex;
@@ -45,19 +45,23 @@
         font-weight: 400;
         line-height: normal;
         background-color: white;
-        border: solid 1px 30; 
+        border: solid 1px #000;
+        border-radius: 20px;
+        padding: 10px;
+        width: 12.5rem;
+
+
     
     }
 
-    .section.section.buttonContainer{
-        display:flex;
-        justify-content: space-evenly;
-    }
+    
 
     .buttonContainer{
         display: flex;
-        justify-items: center;
-        flex-direction: column;
+        justify-content: center;
+        flex-direction: column; 
+        align-items: center;
+
     }
     
     .dinamicTitle{
@@ -83,17 +87,27 @@
     .title-top{
         width: 80vw;
         display: flex;
-        height: 59px;
+        height: 3rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         color: #000;
         text-align: center;
-        font-size: 1rem ;
+        font-size: 1.5rem ;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        
+        margin-top: 2rem;
+    }
+    
+    #hours{
+        text-align: center;
+    }
+    #minutes{
+        text-align: center;
+    }
+    #seconds{
+        text-align: center;
     }
     .title{
         width: 80vw;
@@ -111,7 +125,15 @@
 
     }
 
-    .timeImput{
+    #countdownInput{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 2rem;
+
+    }
+
+    .timeImput{ 
         display: flex;
         flex-direction: column;
         width: 80vw;
@@ -131,7 +153,7 @@
     #leyendContainer{
           display: flex;
           width: 100vw;
-          justify-content: center;
+          justify-items: center;
     }
         
    
@@ -155,6 +177,14 @@
             background-color: white;   
     }
 
+    #btcont{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 360px;
+    }
             
     #start{
             width: 100px;
@@ -164,6 +194,7 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            justify-self: flex-end;
     }
         
     #stop{
@@ -209,17 +240,485 @@
     label{
         text-align: center;
     }
-        
+    
  
   }
   
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
+
+   
+
+        body{
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            border-top: 2rem;
+            padding-top: 2 rem;
+            }
+        #dTitle{
+            display: flex;
+            justify-items: center;
+            flex-direction: column;
+            width: 20rem;
+            margin-bottom: 4rem;
+        }
+        input::placeholder{
+            display: flex;
+            justify-self: center;
+            color: solid black;
+            border: soloid #000 20px;
+            background-color: white;
+        }
+        
+        #butonA {
+            justify-self: center;
+            width: 100px;
+            flex-shrink: 0;
+            color: #349A04;
+            text-align: center;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            background-color: white;
+            border: solid 1px #000;
+            border-radius: 20px;
+            padding: 10px;
+            width: 12.5rem;
+    
+    
+        
+        }
+    
+        
+    
+        .buttonContainer{
+            display: flex;
+            justify-content: center;
+            flex-direction: column; 
+            align-items: center;
+    
+        }
+        
+        .dinamicTitle{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        
+    
+        main{
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+          
+            align-items: center;
+            justify-items: center;
+         
+        
+        }
+            
+        .title-top{
+            width: 80vw;
+            display: flex;
+            height: 3rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            text-align: center;
+            font-size: 1.5rem ;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 2rem;
+        }
+        
+        #hours{
+            text-align: center;
+        }
+        #minutes{
+            text-align: center;
+        }
+        #seconds{
+            text-align: center;
+        }
+        .title{
+            width: 80vw;
+            margin: 0px; ;
+        }
+            
+            
+        .section {
+            width: 80vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;            
+            justify-items: center;
+            margin-bottom: 5rem;
+    
+        }
+    
+        #countdownInput{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 2rem;
+    
+        }
+    
+        .timeImput{ 
+            display: flex;
+            flex-direction: column;
+            width: 80vw;
+            height: auto;
+        }
+        
+        
+        .timer {       
+            text-align: center;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+            
+    
+        #leyendContainer{
+              display: flex;
+              width: 100vw;
+              justify-items: center;
+        }
+            
+       
+            
+        #countBackName{
+              border:transparent 0px;
+              background-color: white;
+              color: #000;
+              display: block;
+        }
+    
+        .butons{
+                display: flex;
+                width: auto;
+                padding: 10px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 20px;
+                border: 1px solid #000;
+                background-color: white;   
+        }
+    
+        #btcont{
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: space-around;
+            flex-direction: row;
+            width: 360px;
+        }
+                
+        #start{
+                width: 100px;
+                color: #349A04;
+                text-align: center;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                justify-self: flex-end;
+        }
+            
+        #stop{
+                width: 100px;
+                color: #F61111;
+                text-align: center;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+        }
+        
+        #start{
+            width: 100px;
+            flex-shrink: 0;
+            color: #349A04;
+            text-align: center;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+    }
+            
+        div.timeImput{
+                display: flex;
+                justify-content: center;
+                width: 80vw;
+            
+    }
+        #targetTime {
+            display: flex;
+            justify-items: center;
+            border: none;
+            justify-content: space-around;
+    }
+    
+        #targetTime::placeholder {
+            display: flex;
+            justify-self: center;
+            text-align: center;
+    }
+    
+        label{
+            text-align: center;
+        }
+        
+     
     
   }
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
+    
 
-
-
-   }
+        body{
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            border-top: 2rem;
+            padding-top: 2 rem;
+            }
+        #dTitle{
+            display: flex;
+            justify-items: center;
+            flex-direction: column;
+            width: 20rem;
+            margin-bottom: 4rem;
+        }
+        input::placeholder{
+            display: flex;
+            justify-self: center;
+            color: solid black;
+            border: soloid #000 20px;
+            background-color: white;
+        }
+        
+        #butonA {
+            justify-self: center;
+            width: 100px;
+            flex-shrink: 0;
+            color: #349A04;
+            text-align: center;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            background-color: white;
+            border: solid 1px #000;
+            border-radius: 20px;
+            padding: 10px;
+            width: 12.5rem;
+    
+    
+        
+        }
+    
+        
+    
+        .buttonContainer{
+            display: flex;
+            justify-content: center;
+            flex-direction: column; 
+            align-items: center;
+    
+        }
+        
+        .dinamicTitle{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        
+    
+        main{
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            align-items: center;
+            justify-items: center;
+            height: 100vh;
+         
+        
+        }
+            
+        .title-top{
+            width: 80vw;
+            display: flex;
+            height: 3rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            text-align: center;
+            font-size: 1.5rem ;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 2rem;
+        }
+        
+        #hours{
+            text-align: center;
+        }
+        #minutes{
+            text-align: center;
+        }
+        #seconds{
+            text-align: center;
+        }
+        .title{
+            width: 80vw;
+            margin: 0px; ;
+        }
+            
+            
+        .section {
+            width: 80vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;            
+            justify-items: center;
+            margin-bottom: 5rem;
+    
+        }
+    
+        #countdownInput{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 2rem;
+    
+        }
+    
+        .timeImput{ 
+            display: flex;
+            flex-direction: column;
+            width: 80vw;
+            height: auto;
+        }
+        
+        
+        .timer {       
+            text-align: center;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+            
+    
+        #leyendContainer{
+              display: flex;
+              width: 100vw;
+              justify-items: center;
+        }
+            
+       
+            
+        #countBackName{
+              border:transparent 0px;
+              background-color: white;
+              color: #000;
+              display: block;
+        }
+    
+        .butons{
+                display: flex;
+                width: auto;
+                padding: 10px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 20px;
+                border: 1px solid #000;
+                background-color: white;   
+        }
+    
+        #btcont{
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: space-around;
+            flex-direction: row;
+            width: 360px;
+        }
+                
+        #start{
+                width: 100px;
+                color: #349A04;
+                text-align: center;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                justify-self: flex-end;
+        }
+            
+        #stop{
+                width: 100px;
+                color: #F61111;
+                text-align: center;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+        }
+        
+        #start{
+            width: 100px;
+            flex-shrink: 0;
+            color: #349A04;
+            text-align: center;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+    }
+            
+        div.timeImput{
+                display: flex;
+                justify-content: center;
+                width: 80vw;
+            
+    }
+        #targetTime {
+            display: flex;
+            justify-items: center;
+            border: none;
+            justify-content: space-around;
+    }
+    
+        #targetTime::placeholder {
+            display: flex;
+            justify-self: center;
+            text-align: center;
+    }
+    
+        label{
+            text-align: center;
+        }}
+        
+     
+   
