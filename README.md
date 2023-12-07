@@ -11,8 +11,8 @@ tip research setInteval
 ##Projektphasen
 
 -Planung und Recherche
--Mockup erstellen (mobile first) -ok
--Projektressourcen einrichten
+-Mockup erstellen (mobile first) 
+-Projektressourcen einrichten 
 -Programmieren und Testen des Prototyps mit JavaScript: Timer, -Countdown-Timer, Zeitdefinition (Variable, Eingabefeld, Datumsfeld), Start/-Stop-Buttons
 -Stilisierung der Timer-Anzeige und Aufbau des Designs um die -Prototyp-Elemente (mobile first)
 
