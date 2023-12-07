@@ -142,12 +142,7 @@
           color: #000;
           display: block;
     }
-       
 
-       
-   
-    
-        
     .butons{
             display: flex;
             width: auto;
@@ -155,7 +150,6 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
-            flex-shrink: 0;
             border-radius: 20px;
             border: 1px solid #000;
             background-color: white;   
@@ -164,10 +158,8 @@
             
     #start{
             width: 100px;
-            flex-shrink: 0;
             color: #349A04;
             text-align: center;
-            font-family: ;
             font-size: 32px;
             font-style: normal;
             font-weight: 400;
@@ -176,10 +168,8 @@
         
     #stop{
             width: 100px;
-            flex-shrink: 0;
             color: #F61111;
             text-align: center;
-           
             font-size: 32px;
             font-style: normal;
             font-weight: 400;
@@ -191,7 +181,6 @@
         flex-shrink: 0;
         color: #349A04;
         text-align: center;
-        font-family: ;
         font-size: 32px;
         font-style: normal;
         font-weight: 400;
@@ -203,18 +192,20 @@
             justify-content: center;
             width: 80vw;
         
-    }
+}
     #targetTime {
         display: flex;
         justify-items: center;
         border: none;
         justify-content: space-around;
-    }
+}
+
     #targetTime::placeholder {
         display: flex;
         justify-self: center;
         text-align: center;
-    }
+}
+
     label{
         text-align: center;
     }
