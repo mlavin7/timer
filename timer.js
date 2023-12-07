@@ -41,7 +41,7 @@ function startCountdown() {
   const inputTime = document.getElementById('targetTime').value;
 
   // Validate the input format (days:hours:minutes:seconds)
-  const regex = /^(\d+):(\d{1,2}):(\d{1,2}):(\d{1,2})$/; 
+  const regex = /^(\d{1,2}):(\d{1,2}):(\d{1,2})$/; 
   
   const match = inputTime.match(regex); // check that the imput match the rules of the regulat exporession
 
@@ -50,7 +50,7 @@ function startCountdown() {
     return;
   } // if do not mack deploy an alert estating the format ( as is gonna be in the place holder
 
-  const [, days, hours, minutes, seconds] = match; // here we create an object
+  const [, hours, minutes, seconds] = match; // here we create an object
 
 
   // Calculate the target date and time
@@ -77,7 +77,7 @@ function updateCountdown() {
     clearInterval(countdownInterval);
     document.getElementById('countdown').innerHTML = 'Countdown expired!';
   } else {
-    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    
     const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);

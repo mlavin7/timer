@@ -28,17 +28,47 @@
     }
     input::placeholder{
         display: flex;
-        justify-items: center;
+        justify-self: center;
         color: solid black;
         border: soloid #000 20px;
         background-color: white;
     }
+    
+    #butonA {
+        justify-self: center;
+        width: 100px;
+        flex-shrink: 0;
+        color: #349A04;
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        background-color: white;
+        border: solid 1px 30; 
+    
+    }
 
+    .section.section.buttonContainer{
+        display:flex;
+        justify-content: space-evenly;
+    }
 
+    .buttonContainer{
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+    }
+    
     .dinamicTitle{
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        text-align: center;
     }
+    
+    
+
     main{
         display: flex;
         flex-direction: column;
@@ -88,11 +118,7 @@
         height: auto;
     }
     
-    div.butonCont{
-        display: flex;
-        justify-items: center;
-
-    }
+    
     .timer {       
         text-align: center;
         font-size: 2rem;
@@ -117,15 +143,9 @@
           display: block;
     }
        
-    input{
-           
-           background-color: white;
-    }
+
        
-    element.style{
-        display: flex;
-        justify-self: center;  
-    }
+   
     
         
     .butons{
@@ -165,12 +185,38 @@
             font-weight: 400;
             line-height: normal;
     }
+    
+    #start{
+        width: 100px;
+        flex-shrink: 0;
+        color: #349A04;
+        text-align: center;
+        font-family: ;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+}
         
     div.timeImput{
             display: flex;
             justify-content: center;
             width: 80vw;
         
+    }
+    #targetTime {
+        display: flex;
+        justify-items: center;
+        border: none;
+        justify-content: space-around;
+    }
+    #targetTime::placeholder {
+        display: flex;
+        justify-self: center;
+        text-align: center;
+    }
+    label{
+        text-align: center;
     }
         
  
