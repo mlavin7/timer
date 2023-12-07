@@ -5,26 +5,44 @@ function updateTitle(){
 
 }
 
-function displayField(){
-    let field= document.getElementById("countBackName")// get the field
-    let displaySetting = field.style.display;// get the current value of the field display property
-   
-        if (displaySetting == 'block') {
-          // clock is visible. hide it
-          field.style.display = 'none';
-          // change button text
-        }
-        else {
-          // clock is hidwidthen. show it
-          field.style.display = 'block';
-          // change button text
-        }
-      }
+function toggleInput() {
+  // Get the input element
+  let inputElement = document.getElementById("countBackName");
 
+  // Check if the input element exists
+  if (inputElement) {
+      // Toggle the display property
+      if (inputElement.style.display === "none") {
+          // If currently hidden, show it
+          inputElement.style.display = "";
+      } else {
+          // If currently visible, hide it
+          inputElement.style.display = "none";
+      }
+    }}
+
+// function displayField(){
+//     let field= document.getElementById("countBackName")// get the field
+//     let displaySetting = field.style.display;// get the current value of the field display property
+   
+//         if (displaySetting == 'block') {
+//           // clock is visible. hide it
+//           field.style.display = 'none';
+//           // change button text
+//         }
+//         else {
+//           // clock is hidwidthen. show it
+//           field.style.display = 'block';
+//           // change button text
+//         }
+//       }
+    
         
   function callBothFunctions(){
     updateTitle();
-    displayField();
+    //displayField();
+    toggleInput();
+
   }
 
 // countdown
@@ -67,7 +85,7 @@ let mySound = new Audio('sound/spooky-gongwav-14904 (2).mp3')
       if (totalTime <= 0) {
         clearInterval(countdownInterval);
         document.getElementById('countdown').textContent = 'Countdown Finished';
-        mySound.play()
+        
       } else {
         totalTime--;
       }
@@ -76,10 +94,11 @@ let mySound = new Audio('sound/spooky-gongwav-14904 (2).mp3')
   // Initial update
   
 
+  
   function stopCountdown() {
     clearInterval(countdownInterval); // <here I call again the interval stored outside the funcion
           document.getElementById('countdown').textContent = 'Countdown Stoped';
-          mySound.play()  }
+            }
 
 
 
