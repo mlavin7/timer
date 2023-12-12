@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="timer1.js" defer></script>
+
     
-    <script src="timer1.js" delay></script>
 </head>
 <body>
     <main>
@@ -27,7 +28,7 @@
             </div>
            <div class="buttonContainer">
             <form>
-            <input type="text" name="countBackTitle" id="countBackName" placeholder="Insert Count Back name" /> 
+            <input type="text" name="countBackTitle" id="countBackName" placeholder="Insert Count Back name" border=" solid 1px black "/> 
             </form>
             <br>
             <button class="dinamicButon " id="butonA" onclick=" callBothFunctions() "> press</button> 
@@ -38,11 +39,11 @@
         <section class="section">
             <div class="timeImput"> 
                 <form id="countdownInput">
-                    <label for="hours" ></label>
+                    <label for="hours" >hours </label>
                     <input type="number" id="hours" placeholder="00" min="1" max="24" maxlength="2"> <!-- id hours use to be target time check in js--> 
-                    <label for="minutes" >:</label>
+                    <label for="minutes" >minutes </label>
                     <input type="number" id="minutes" placeholder="00" min="1" max="59" maxlength="2"> <!-- id hours use to be target time check in js--> 
-                    <label for="seconds" >:</label>
+                    <label for="seconds" >seconds </label>
                     <input type="number" id="seconds" placeholder="00" min="1" max="59" maxlength="2"> <!-- id hours use to be target time check in js--> 
                 </form>
 
@@ -58,6 +59,5 @@
 
     </main>
 <!-- check heigh to 667 -->
-    
 </body>
 </html>

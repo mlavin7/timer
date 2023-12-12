@@ -1,17 +1,27 @@
+let hoursValue= document.getElementById("hours"); 
+let minutesValue = document.getElementById("minutes"); 
+let secondsValue = document.getElementById("seconds"); 
+let countbackNameValue = document.getElementById("countBackName")
+let dinamicTitleText = document.getElementById("dinamicTitle")
+let countbackNameField = document.getElementById("countBackName");
+let countdownTextContent = document.getElementById('countdown'); 
+let countdownInterval; 
 
 function updateTitle(){
-    let title= document.getElementById("countBackName").value
-    document.getElementById("dinamicTitle").textContent = title
+  console.log(countbackNameValue)
+    let title= countbackNameValue.value; 
+    dinamicTitleText.textContent = title
+    console.log(lello)
 
 }
 
 function toggleInput() {
   // Get the input element
-  let inputElement = document.getElementById("countBackName");
+  let inputElement = countbackNameValue;
 
   // Check if the input element exists
   if (inputElement) {
-      // Toggle the display property
+       // Toggle the dispdocument.getElementById("hours").valuelay propertydocument.getElementById("hours").value; 
       if (inputElement.style.display === "none") {
           // If currently hidden, show it
           inputElement.style.display = "";
@@ -20,84 +30,62 @@ function toggleInput() {
           inputElement.style.display = "none";
       }
     }}
+    countdownInterval; 
 
-// function displayField(){
-//     let field= document.getElementById("countBackName")// get the field
-//     let displaySetting = field.style.display;// get the current value of the field display property
-   
-//         if (displaySetting == 'block') {
-//           // clock is visible. hide it
-//           field.style.display = 'none';
-//           // change button text
-//         }
-//         else {
-//           // clock is hidwidthen. show it
-//           field.style.display = 'block';
-//           // change button text
-//         }
-//       }
-    
         
   function callBothFunctions(){
     updateTitle();
-    //displayField();
     toggleInput();
 
   }
-
-// countdown
-
-
-let countdownInterval; // I defined interval outside the Function so 
-// can also be called by the stop buton
 
 
 
   function startCountdown() {
   
-    let hours = document.getElementById("hours").value; 
+    let hours = hoursValue.value; 
     let h = 0;
     if (hours !== "") h = parseInt(hours);
      
         
-    let minutes= document.getElementById("minutes").value; 
+    let minutes= minutesValue.value;  
     let m = 0;
     if (minutes !== "") m = parseInt(minutes);
   
           
-    let seconds = document.getElementById("seconds").value; 
+    let seconds =secondsValue.value; 
     let s = 0;
     if (seconds !== "") s = parseInt(seconds);
      
     
-    let totalTime = h * 3600 + m * 60 + s;
+    let totalTime = h * 3600 + m * 60 + s;let countdownInterval;
     
 
     countdownInterval = setInterval(function() { //<< here i call the interval stored outside the function
 
       let hoursLeft = Math.floor(totalTime / 3600);
       let minutesLeft = Math.floor((totalTime % 3600) / 60);
-      let secondsLeft = totalTime % 60;
+      let secondsLeft = totalTime % 60; 
 
       document.getElementById('countdown').textContent = 
-          hoursLeft + ' hours ' + minutesLeft + ' minutes ' + secondsLeft + ' seconds';
+          hoursLeft + ' hours ' + ' ' + minutesLeft + ' minutes ' +' ' + secondsLeft + ' seconds';
 
       if (totalTime <= 0) {
         clearInterval(countdownInterval);
-        document.getElementById('countdown').textContent = 'Countdown Finished';
+        countdownTextContent.textContent= 'Countdown Finished';
         
       } else {
         totalTime--;
       }
 
     }, 1000);}
-  // Initial update
+
   
 
   
   function stopCountdown() {
-    clearInterval(countdownInterval); // <here I call again the interval stored outside the funcion
-          document.getElementById('countdown').textContent = 'Countdown Stoped';
+      clearInterval(countdownInterval); 
+      countdownTextContent,textContent = 'Countdown Stoped';
             }
 
 
