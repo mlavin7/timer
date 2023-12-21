@@ -3,6 +3,8 @@
 
 }
 
+
+
 body{
         display: flex;
         width: 100vw;
@@ -13,45 +15,121 @@ body{
         justify-content: center;
         align-content: center;
         border-top: 2rem;
-        padding-top: 2 rem;
+        padding-left: 50px;
+        padding-right: 50px;
         }
-        
-.section {
+
+
+.timeImput {
+    width: 80vw;
+    margin-bottom: 50px;
+}
+
+/* .box{
+    width: 2.5rem;
+    margin-top: 0px;
+} */
+
+.part1 {
         width: 80vw;
         display: flex;
         flex-direction: row;
         align-items: center;            
         justify-items: center;
-        margin-bottom: 3rem;
+        
     
         }
+.part2 {
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;            
+        justify-items: center;
+                    
+           }
 
- /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+.timput{
+    border: 1px solid red;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 90px;
+}
+
+
+section {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: solid lightgrey 2px;
+    border-radius: 20px;
+    flex-direction: column;
+    padding: 40px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right:40px;
+
 
     
+}
+
+           
     #dTitle{
         display: flex;
         justify-items: center;
         flex-direction: column;
-        width: 20rem;
+        width: 80vw;
         margin-bottom: 4rem;
     }
+
+    #btcont{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 80vw;
+    }
+
+
+    #countdownInput{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-between;
+            
+
+    }
+
+    .title-top{
+        width: 80vw;
+        display: flex;
+        height: 3rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+        text-align: center;
+        font-size: 2.3rem ;
+        font-style: normal;
+        border-bottom: 100px;
+        }
+ /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+   
     input::placeholder{
         display: flex;
         justify-self: center;
         color: solid black;
         border: soloid #000 20px;
         background-color: white;
-        text-align: center;.section {
-            width: 80vw;
-            display: flex;
-            flex-direction: row;
-            align-items: center;            
-            justify-items: center;
-            margin-bottom: 3rem;
+        text-align: center;
     
-        }
+        
     }
     
     #butonA {
@@ -93,31 +171,20 @@ body{
         justify-items: center;
     }
         
-    .title-top{
-        width: 80vw;
-        display: flex;
-        height: 3rem;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #000;
-        text-align: center;
-        font-size: 1.5rem ;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin-top: 2rem;
-    }
+  
+    
     
     #hours{
         text-align: center;
     }
     #minutes{
-        text-align: center;
-    }
-    #seconds{
-        text-align: center;
-    }
+        
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            /* margin: 2rem; */
+    
+        }
     .title{
         width: 80vw;
         margin: 0px; ;
@@ -126,19 +193,12 @@ body{
         
     
 
-    #countdownInput{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin: 2rem;
-
-    }
 
     .timeImput{ 
         display: flex;
         flex-direction: column;
         width: 80vw;
-        height: auto;
+      
     }
     
     
@@ -178,14 +238,7 @@ body{
             background-color: white;   
     }
 
-    #btcont{
-        display: flex;
-        align-items: center;
-        align-content: center;
-        justify-content: space-around;
-        flex-direction: row;
-        width: 360px;
-    }
+   
             
     #start{
             width: 100px;
@@ -249,13 +302,6 @@ body{
   @media only screen and (min-width: 600px) {
 
    
-        #dTitle{
-            display: flex;
-            justify-items: center;
-            flex-direction: column;
-            width: 20rem;
-            margin-bottom: 4rem;
-        }
         input::placeholder{
             display: flex;
             justify-self: center;
@@ -314,21 +360,7 @@ body{
         
         }
             
-        .title-top{
-            width: 80vw;
-            display: flex;
-            height: 3rem;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #000;
-            text-align: center;
-            font-size: 1.5rem ;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            margin-top: 2rem;
-        }
+      
         
         #hours{
             text-align: center;
@@ -345,29 +377,13 @@ body{
         }
             
             
-        .section {
-            width: 80vw;
-            display: flex;
-            flex-direction: row;
-            align-items: center;            
-            justify-items: center;
-            margin-bottom: 5rem;
-    
-        }
-    
-        #countdownInput{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            margin: 2rem;
-    
-        }
+
     
         .timeImput{ 
             display: flex;
             flex-direction: column;
             width: 80vw;
-            height: auto;
+          
         }
         
         
@@ -406,15 +422,7 @@ body{
                 border: 1px solid #000;
                 background-color: white;   
         }
-    
-        #btcont{
-            display: flex;
-            align-items: center;
-            align-content: center;
-            justify-content: space-around;
-            flex-direction: row;
-            width: 360px;
-        }
+  
                 
         #start{
                 width: 100px;
@@ -478,14 +486,7 @@ body{
   @media only screen and (min-width: 992px) {
     
 
-       
-        #dTitle{
-            display: flex;
-            justify-items: center;
-            flex-direction: column;
-            width: 20rem;
-            margin-bottom: 4rem;
-        }
+    
         input::placeholder{
             display: flex;
             justify-self: center;
@@ -544,21 +545,7 @@ body{
         
         }
             
-        .title-top{
-            width: 80vw;
-            display: flex;
-            height: 3rem;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #000;
-            text-align: center;
-            font-size: 1.5rem ;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            margin-top: 2rem;
-        }
+     
         
         #hours{
             text-align: center;
@@ -575,23 +562,8 @@ body{
         }
             
             
-        .section {
-            width: 80vw;
-            display: flex;
-            flex-direction: row;
-            align-items: center;            
-            justify-items: center;
-            margin-bottom: 5rem;
+       
     
-        }
-    
-        #countdownInput{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            margin: 2rem;
-    
-        }
     
         .timeImput{ 
             display: flex;
@@ -637,14 +609,7 @@ body{
                 background-color: white;   
         }
     
-        #btcont{
-            display: flex;
-            align-items: center;
-            align-content: center;
-            justify-content: space-around;
-            flex-direction: row;
-            width: 360px;
-        }
+    
                 
         #start{
                 width: 100px;

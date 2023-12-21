@@ -5,13 +5,16 @@ let countbackNameValue = document.getElementById("countBackName")
 let dinamicTitleText = document.getElementById("dinamicTitle")
 let countbackNameField = document.getElementById("countBackName");
 let countdownTextContent = document.getElementById('countdown'); 
-let countdownInterval; 
+let countdownIntervalsecondsValue; 
+let sound = new Audio('./spooky-gongwav-14904 (2).mp3')
 
+
+//this funcion will pudate the title of the counter, replacing the previous one in the elemet
 function updateTitle(){
   console.log(countbackNameValue)
     let title= countbackNameValue.value; 
     dinamicTitleText.textContent = title
-    console.log(lello)
+    
 
 }
 
@@ -30,7 +33,7 @@ function toggleInput() {
           inputElement.style.display = "none";
       }
     }}
-    countdownInterval; 
+    //countdownInterval; 
 
         
   function callBothFunctions(){
@@ -73,6 +76,7 @@ function toggleInput() {
       if (totalTime <= 0) {
         clearInterval(countdownInterval);
         countdownTextContent.textContent= 'Countdown Finished';
+        sound.play(); 
         
       } else {
         totalTime--;
