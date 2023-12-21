@@ -42,7 +42,7 @@ function toggleInput() {
 
   }
 
-
+  let countdownInterval;
 
   function startCountdown() {
   
@@ -61,7 +61,8 @@ function toggleInput() {
     if (seconds !== "") s = parseInt(seconds);
      
     
-    let totalTime = h * 3600 + m * 60 + s;let countdownInterval;
+    let totalTime = h * 3600 + m * 60 + s;
+    
     
 
     countdownInterval = setInterval(function() { //<< here i call the interval stored outside the function
@@ -89,7 +90,7 @@ function toggleInput() {
   
   function stopCountdown() {
       clearInterval(countdownInterval); 
-      countdownTextContent,textContent = 'Countdown Stoped';
+      countdownTextContent.textContent = 'Countdown Stoped';
             }
 
 
