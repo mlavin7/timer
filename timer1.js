@@ -7,6 +7,9 @@ let countbackNameField = document.getElementById("countBackName");
 let countdownTextContent = document.getElementById('countdown'); 
 let countdownIntervalsecondsValue; 
 let sound = new Audio('./spooky-gongwav-14904 (2).mp3')
+let countdownInterval;
+let totalTime
+
 
 
 //this funcion will pudate the title of the counter, replacing the previous one in the elemet
@@ -42,8 +45,15 @@ function toggleInput() {
 
   }
 
-  let countdownInterval;
+  function validated(){
+    if (totalTime != 0){
+      startCountdown()
+    } else{
+      alert("please enter a time to count down")
+    }
+  }
 
+ 
   function startCountdown() {
   
     let hours = hoursValue.value; 
@@ -61,7 +71,7 @@ function toggleInput() {
     if (seconds !== "") s = parseInt(seconds);
      
     
-    let totalTime = h * 3600 + m * 60 + s;
+    totalTime = h * 3600 + m * 60 + s;
     
     
 
